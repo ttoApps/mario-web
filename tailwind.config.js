@@ -17,6 +17,9 @@ module.exports = {
         'mario-green': '#54FC54',
         'mario-brown': '#BC8844',
         'mario-orange': '#FC9838',
+        'background': '#1E1E1E',
+        'foreground': '#FFFFFF',
+        'border': '#E5E7EB',
       },
       keyframes: {
         'pulse-slow': {
