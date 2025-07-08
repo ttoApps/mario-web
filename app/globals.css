@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-300;
+  }
+  body {
+    @apply bg-mario-blue text-white;
+  }
+}
+
+@layer utilities {
+  .pixel-art {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Custom pixel font styles */
+.pixel-font {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+}
+
+/* Game-specific styles */
+.game-container {
+  background: linear-gradient(180deg, #5C94FC 0%, #5C94FC 25%, #54FC54 25%, #54FC54 100%);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.brick-pattern {
+  background-image: 
+    linear-gradient(45deg, #BC8844 25%, transparent 25%),
+    linear-gradient(-45deg, #BC8844 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #BC8844 75%),
+    linear-gradient(-45deg, transparent 75%, #BC8844 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.cloud-pattern {
+  background: white;
+  border-radius: 50px;
+  position: relative;
+}
+
+.cloud-pattern::before,
+.cloud-pattern::after {
+  content: '';
+  position: absolute;
+  background: white;
+  border-radius: 50px;
+}
+
+.cloud-pattern::before {
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 10px;
+}
+
+.cloud-pattern::after {
+  width: 60px;
+  height: 60px;
+  top: -35px;
+  right: 10px;
+}
